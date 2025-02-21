@@ -4,13 +4,22 @@ import pandas as pd
 def fetch_data_from_snowflake():
     # Establish a connection to Snowflake
     conn = snowflake.connector.connect(
-        user='YOUR_USERNAME',
-        password='YOUR_PASSWORD',
-        account='YOUR_ACCOUNT',
-        warehouse='YOUR_WAREHOUSE',
-        database='YOUR_DATABASE',
-        schema='YOUR_SCHEMA'
+        user='dushantgohri',
+        password='Dg@17343857148',
+        account='pwizmma-ka25931',
+        warehouse='compute_wh',
+        database='test_datawarehous',
+        schema='public'
     )
+
+#     conn_params = {
+#     "user": "dushantgohri",
+#     "password": "Dg@17343857148",
+#     "account": "pwizmma-ka25931",
+#     "warehouse": "compute_wh",
+#     "database": "test_datawarehouse",
+#     "schema": "raw"
+# }
 
     # Fetch training data
     train_query = "SELECT * FROM YOUR_TRAIN_TABLE"
